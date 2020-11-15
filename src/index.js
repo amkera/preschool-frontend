@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux';
+import studentReducer from './reducers/studentReducer'
 
 //set up the store => import create store from redux. it comes from redux.
 //import createStore from redux for async requests
@@ -18,9 +19,10 @@ import App from './App';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENTION_COMPOSE__ || compose;
 
-let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
-//need to incorporate compose so I can combine multiple middlewares and pass one argument in. Reducers take in an action
-//previous state, and they make a new state.
+let store = createStore(studentReducer, composeEnhancers(applyMiddleware(thunk)))
+//need to incorporate compose so I can combine multiple middlewares and pass one argument in. Reducers take in an action &
+//previous state, and they return a new state.
+//anytime something is dispatched, I want that action object sent to the reducer which will update the store. 
 
 
 ReactDOM.render(
