@@ -19,12 +19,12 @@ import App from './App';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENTION_COMPOSE__ || compose;
 
 let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
-//need to incorporate compose so I can combine multiple middlewares and pass one argument in. Reducers take in an action 
+//need to incorporate compose so I can combine multiple middlewares and pass one argument in. Reducers take in an action
 //previous state, and they make a new state.
 
 
 ReactDOM.render(
-  <Provider >
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root')
