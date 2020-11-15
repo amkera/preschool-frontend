@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux';
 
@@ -9,16 +9,26 @@ import { Provider } from 'react-redux';
 //import provider, anything we wrap in provider will have access to the redux store
 
 import App from './App';
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENTION_COMPOSE__ || compose;
+
+let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
+//need to incorporate compose so I can combine multiple middlewares and pass one argument in. Reducers take in an action 
+//previous state, and they make a new state.
+
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider >
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();
+//provider makes it so the store is global to all components and containers, aka App and all its children.
+//They will have access to the store that I pass into the provider
