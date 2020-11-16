@@ -1,4 +1,5 @@
 import React from 'react';
+import StudentForm from '../components/StudentForm'
 
 class StudentsContainer extends React.Component {
 
@@ -6,7 +7,7 @@ class StudentsContainer extends React.Component {
     return (
 
       <div>
-        I am students container
+      <StudentForm />
       </div>
 
     )
