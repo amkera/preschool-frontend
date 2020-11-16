@@ -1,5 +1,7 @@
 import React from 'react';
 import StudentForm from '../components/StudentForm'
+import Students from '../components/Students'
+
 
 class StudentsContainer extends React.Component {
 
@@ -8,6 +10,7 @@ class StudentsContainer extends React.Component {
 
       <div>
       <StudentForm />
+      <Students />
       </div>
 
     )
