@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux'
 //we want App to have access to the store
-import fetchStudents from './actions/fetchStudents'
+//import fetchStudents from './actions/fetchStudents'
+import StudentsContainer from './containers/StudentsContainer'
 
 
 
@@ -16,14 +17,14 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        App
+        <StudentsContainer />
       </div>
     )
   }
 
 }
 
-export default connect(null, {fetchStudents})(App);
+export default connect()(App);
 
 
 //we also need to connect down here where we export

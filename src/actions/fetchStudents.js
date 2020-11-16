@@ -1,7 +1,7 @@
 export default function fetchStudents() {
-  fetch('http://localhost:3000/api/v1/students')
-  .then(response => response.json())
-  .then(jsonObject => console.log(jsonObject))
+  // fetch('http://localhost:3000/api/v1/students')
+  // .then(response => response.json())
+  // .then(jsonObject => console.log(jsonObject))
 
 }
 //thunk allows us to call dispatch INSIDE the fetch function so it's asynchronous
