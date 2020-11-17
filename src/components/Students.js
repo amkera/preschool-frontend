@@ -2,12 +2,6 @@ import React from 'react';
 
 const Students = (props) => {
 
-  // return (
-  //   <div>
-  //     {props.students.map(student => <p key={student.id}>Name: {student.name} Bio: {student.bio} Allergies: {student.allergies} </p>)}
-  //   </div>
-  // )
-
   return (
     <div>
       {props.students.map(student => (
@@ -24,6 +18,7 @@ const Students = (props) => {
 
 export default Students;
 
-//in functions, we have to pass props into the function
+//in functions, we have to pass props into the function. you don't use this in functions.
+//it's a keyword for classes 
 
 //in classes, we can just say this.props

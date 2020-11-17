@@ -19,6 +19,7 @@ class StudentsContainer extends React.Component {
 
       <div>
       <StudentForm />
+      <br/>
       <Students students={this.props.students}/>
       </div>
 
