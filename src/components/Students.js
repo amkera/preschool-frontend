@@ -4,7 +4,7 @@ const Students = (props) => {
 
   return (
     <div>
-    hey im all students
+      {props.students.map(student => <p key={student.id}>Name: {student.name} Bio: {student.bio} Allergies: {student.allergies} </p>)}
     </div>
   )
 
