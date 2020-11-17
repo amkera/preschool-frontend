@@ -25,7 +25,7 @@ class StudentForm extends React.Component {
     this.props.addStudent(this.state);
   }
 
-  //need an action creator, addStudent.js
+  //this is passed into the action creator, addStudent.js. this.state is the formData.
   //this.handleChange actually automatically passes event into the function so I don't have to pass it in below
 
   render() {

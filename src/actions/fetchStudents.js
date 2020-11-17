@@ -23,4 +23,4 @@ export default function fetchStudents() {
 //since fetch takes time, we can't return the action right away and we don't want dispatch
 //to automatically be called.
 //thunk allows us to use dispatch function inside an action creator, we can dispatch
-//the resposne from the fetch request.. We have to return dispatch.
+//the response from the fetch request.. We have to return dispatch.

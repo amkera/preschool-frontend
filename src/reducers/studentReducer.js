@@ -6,11 +6,11 @@ export default function studentReducer(state = { students: []}, action) {
     case 'FETCH_STUDENTS':
       return {students: action.payload}
       //this is my new redux state, and I want an object where key is students and value is array of student objs
+    case 'ADD_STUDENT':
+      return {...state, students: [...state.students, action.payload]}
     default:
       return state
-
   }
-
 }
 
 //action.payload will be the array of students
