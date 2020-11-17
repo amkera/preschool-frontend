@@ -21,10 +21,10 @@ class App extends React.Component {
       </div>
     )
   }
-
 }
 
-export default connect()(App);
+export default App;
+
 
 
 //we also need to connect down here where we export
