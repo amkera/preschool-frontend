@@ -15,14 +15,16 @@ class StudentForm extends React.Component {
     this.setState({
       [event.target.name]: event.target.value
     })
-    //name: event.target.value
-    //bio: event.target.value
-    //allergies: event.target.value
   }
 
   handleSubmit = (event) => {
     event.preventDefault()
     this.props.addStudent(this.state);
+    this.setState({
+      name: '',
+      bio: '',
+      allergies: ''
+    })
   }
 
   //this is passed into the action creator, addStudent.js. this.state is the formData.
