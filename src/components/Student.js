@@ -1,5 +1,6 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom'
+import PaymentsContainer from '../containers/PaymentsContainer'
 
 const Student = (props) => {
 
@@ -14,9 +15,11 @@ const Student = (props) => {
       Name: {student ? student.name : null} <br/>
       Bio: {student ? student.bio : null}  <br/>
       Allergies: {student ? student.allergies : null}
+      <PaymentsContainer student={student}/>
     </ul>
   )
 
 }
 
 export default Student;
+//goal: have a component here for payments
