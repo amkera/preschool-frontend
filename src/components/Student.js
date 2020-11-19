@@ -2,14 +2,16 @@ import React from 'react';
 
 const Student = (props) => {
 
-  console.log(props)
+  let student = props.students[props.match.params.id - 1]
+
+  console.log(student)
 
   return (
-    <li>
-      <strong>Name:</strong>: {props.student.name} <br/>
-      <strong>About Me:</strong> {props.student.bio} <br/>
-      <strong>Allergies:</strong> {props.student.allergies} <br/>
-    </li>
+    <ul>
+      Name: {student ? student.name : null} <br/>
+      Bio: {student ? student.bio : null}  <br/>
+      Allergies: {student ? student.allergies : null}  <br/>
+    </ul>
   )
 
 }

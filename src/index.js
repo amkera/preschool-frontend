@@ -4,6 +4,7 @@ import { createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux';
 import studentReducer from './reducers/studentReducer'
+import {BrowserRouter as Router} from 'react-router-dom'
 
 //set up the store => import create store from redux. it comes from redux.
 //import createStore from redux for async requests
@@ -27,12 +28,14 @@ let store = createStore(studentReducer, composeEnhancers(applyMiddleware(thunk))
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
 
-//passing in store to the App, so any child/grandchild can use and update the data in the store 
+//passing in store to the App, so any child/grandchild can use and update the data in the store
 
 
 //provider makes it so the store is global to all components and containers, aka App and all its children.

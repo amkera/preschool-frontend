@@ -1,8 +1,10 @@
 import React from 'react';
 import StudentForm from '../components/StudentForm'
 import Students from '../components/Students'
+import Student from '../components/Student'
 import fetchStudents from '../actions/fetchStudents'
 import { connect } from 'react-redux'
+import {Route} from 'react-router-dom'
 //need to connect to the store since StudentsContainer is the component responsible for rendering data
 
 
@@ -18,15 +20,24 @@ class StudentsContainer extends React.Component {
     return (
 
       <div>
-      <StudentForm />
+      <Route path="/students/new" component={StudentForm} />
       <br/>
-      <Students students={this.props.students}/>
+      <Route path="/students/:id" render={(routerProps) => <Student {...routerProps} students={this.props.students} /> } />
+      <Route exact path="/students" render={(routerProps) => <Students {...routerProps} students={this.props.students} /> } />
       </div>
 
     )
   }
 
 }
+
+//for the dynamic show route, I pass in routerProps as an argument to an anon function
+//then we render the Student Component, pass in routerProps which gives me access to params where I can pull the id, and then pass down all students
+//to the StudentComponent
+
+//in order to give students component access to props, we need to set up routes here. because this component can send props down.
+
+
 //getting students from redux store, accessing them in this component through props,
 //and passing them down to the Students component
 
