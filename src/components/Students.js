@@ -1,12 +1,15 @@
 import React from 'react';
 import Student from './Student'
+import {Route, Link} from 'react-router-dom'
 
 const Students = (props) => {
 
   return (
     <div>
       {props.students.map(student => (
-        <ul key={student.id}><Student student={student} /></ul>
+        <ul key={student.id}>
+          <Link to={`/students/${student.id}`}>{student.name}</Link>
+        </ul>
       ))}
     </div>
   )
