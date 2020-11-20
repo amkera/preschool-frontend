@@ -9,6 +9,8 @@ class PaymentsContainer extends React.Component {
     return (
       <div>
         I am the payments container
+        <br/>
+        My Children are:
         <PaymentForm />
         <Payments payments={this.props.student && this.props.student.payments}/>
       </div>
@@ -16,7 +18,7 @@ class PaymentsContainer extends React.Component {
   }
 }
 //need the && because the first time this.props.student.payments is rendered, Redux store will be undefined
- 
+
 
 
 export default PaymentsContainer;

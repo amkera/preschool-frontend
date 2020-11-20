@@ -5,7 +5,7 @@ class PaymentForm extends React.Component {
   render() {
     return (
       <div>
-      I am the payment form
+      Payment Form 
       </div>
     )
   }
