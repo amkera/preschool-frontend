@@ -8,10 +8,9 @@ class PaymentsContainer extends React.Component {
   render() {
     return (
       <div>
-        I am the payments container
         <br/>
-        My Children are:
-        <PaymentForm />
+
+        <PaymentForm student={this.props.student} />
         <Payments payments={this.props.student && this.props.student.payments}/>
       </div>
     )
