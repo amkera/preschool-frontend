@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux';
+import {addPayment} from '../actions/addPayment'
 
 
 class PaymentForm extends React.Component {
@@ -20,6 +21,12 @@ class PaymentForm extends React.Component {
     event.preventDefault();
     //actioncreator needed, and correct student to associate account
     //addPayment(this.state, this.props.student.id)
+    this.props.addPayment(this.state, this.props.student.id)
+    this.setState({
+      amount: '0.00',
+      date: '',
+      paid: 'Yes'
+    })
 
   }
 
@@ -57,7 +64,7 @@ class PaymentForm extends React.Component {
   }
 }
 
-export default connect(null)(PaymentForm);
+export default connect(null, {addPayment})(PaymentForm);
 //don't need a mapStateToProps since props are being passed down from Payments Container
 //DOES need a mapDispatchToProps is needed, or an action is needed since we are changing the store
 
