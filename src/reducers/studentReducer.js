@@ -16,6 +16,14 @@ export default function studentReducer(state = { students: []}, action) {
           return student
         }
       })}
+      case 'DELETE_PAYMENT':
+        return {...state, students: state.students.map(student => {
+          if (student.id === action.payload.id) {
+            return action.payload
+          } else {
+            return student
+          }
+        })}
     default:
       return state
   }
@@ -26,6 +34,8 @@ export default function studentReducer(state = { students: []}, action) {
 //replace the account, return the action.payload (the student)
 //else
 //return the student
+
+//^same for delete
 
 
 //action.payload will be the array of students

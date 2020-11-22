@@ -1,16 +1,27 @@
 import React from 'react'
+import {connect} from 'react-redux';
+import {deletePayment} from '../actions/deletePayment'
 
 const Payments = (props) => {
+
+  const handleDelete = (payment) => {
+    // debugger
+    props.deletePayment(payment.id, payment.student_id)
+
+  }
+  //needs to have account and payment id
 
   return (
     <div>
       <p>All Payments</p>
 
       {props.payments && props.payments.map(payment =>
+
         <li key={payment.id}>
-          Amount: {payment.amount} <br/>
+          Amount: ${payment.amount} <br/>
           Date: {payment.date} <br/>
-          Paid: {payment.paid}
+          Paid: {payment.paid} <br/>
+          <button onClick={() => handleDelete(payment)}>Delete</button>
         </li>
       )}
     </div>
@@ -22,4 +33,4 @@ const Payments = (props) => {
 
 }
 
-export default Payments
+export default connect(null, {deletePayment})(Payments)
