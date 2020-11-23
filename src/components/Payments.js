@@ -23,7 +23,7 @@ const Payments = (props) => {
 
         <h5 key={payment.id}>
           <p>Amount: ${payment.amount} </p>
-          <p>Date: {payment.date} </p>
+          <p>Date: {payment.date ? payment.date.slice(0,10) : null} </p>
 
           <p>Paid: {payment.paid === true ? "Yes" : "No"} </p>
           <button onClick={() => handleDelete(payment)}>Delete</button>
