@@ -2,6 +2,7 @@ import React from 'react';
 import StudentForm from '../components/StudentForm'
 import Students from '../components/Students'
 import Student from '../components/Student'
+import Header from '../components/Header'
 import fetchStudents from '../actions/fetchStudents'
 import { connect } from 'react-redux'
 import {Route, Switch} from 'react-router-dom'
@@ -20,6 +21,7 @@ class StudentsContainer extends React.Component {
     return (
 
       <div>
+        <Header/>
         <Switch>
           <Route path="/students/new" component={StudentForm} />
           <Route path="/students/:id" render={(routerProps) => <Student {...routerProps} students={this.props.students} /> } />

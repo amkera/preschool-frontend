@@ -52,4 +52,17 @@ button {
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+  font: normal 13px Verdana, Arial, sans-serif;
+}
+
+.header button {
+  background-color: #3CB371;
+  border: 2px solid black;
+  border-radius: 4px;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font: normal 13px Verdana, Arial, sans-serif;
 }
