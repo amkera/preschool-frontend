@@ -17,12 +17,12 @@ const Payments = (props) => {
 
       {props.payments && props.payments.map(payment =>
 
-        <ul key={payment.id}>
+        <h5 key={payment.id}>
           <p>Amount: ${payment.amount} </p>
           <p>Date: {payment.date} </p>
           <p>Paid: {payment.paid} </p>
           <button onClick={() => handleDelete(payment)}>Delete</button>
-        </ul>
+        </h5>
       )}
     </div>
   )

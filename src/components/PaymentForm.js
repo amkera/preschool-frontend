@@ -35,6 +35,7 @@ class PaymentForm extends React.Component {
   render() {
     return (
       <div>
+      <h3> Add Payment </h3>
         <form class="form" onSubmit={this.handleSubmit}>
           <label>Amount: </label>
             <br/>

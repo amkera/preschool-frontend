@@ -8,9 +8,9 @@ body {
     text-align: center;
     font: normal 13px Verdana, Arial, sans-serif;
 }
-form {
+/* form {
     display: inline-block;
-}
+} */
 
 input[type=text], input[type=number], input[type=date] {
   width: 60%;
@@ -56,7 +56,7 @@ button {
 }
 
 .header button {
-  background-color: #3CB371;
+  background-color: #4682B4;
   border: 2px solid black;
   border-radius: 4px;
   color: white;
@@ -65,4 +65,11 @@ button {
   margin: 4px 2px;
   cursor: pointer;
   font: normal 13px Verdana, Arial, sans-serif;
+}
+
+.header {
+  border: 2px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+
 }
