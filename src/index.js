@@ -12,12 +12,7 @@ import './preschool.css'
 //import provider, anything we wrap in provider will have access to the redux store
 
 import App from './App';
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
+
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENTION_COMPOSE__ || compose;
 
