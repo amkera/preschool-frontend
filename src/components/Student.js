@@ -16,9 +16,9 @@ const Student = (props) => {
 
   return (
     <ul>
-      Name: {student ? student.name : null} <br/>
-      Bio: {student ? student.bio : null}  <br/>
-      Allergies: {student ? student.allergies : null}
+      <p> <strong>Name:</strong> {student ? student.name : null} </p>
+      <p> <strong>Bio: </strong> {student ? student.bio : null} </p>
+      <p> <strong>Allergies: </strong> {student ? student.allergies : null}</p>
       <PaymentsContainer student={student}/>
     </ul>
   )

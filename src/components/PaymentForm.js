@@ -37,21 +37,27 @@ class PaymentForm extends React.Component {
       <div>
         <form class="form" onSubmit={this.handleSubmit}>
           <label>Amount: </label>
+            <br/>
             <input type="number" step="0.01" name="amount" value={this.state.amount} onChange={this.handleChange}/>
           <br/>
 
 
           <label>Date: </label>
+            <br/>
             <input type="date" name="date" value={this.state.date} onChange={this.handleChange}/>
           <br/>
 
           <label>Payment Received? </label>
 
+          <div class="dropdown">
+            <select name="paid" value={this.state.paid} onChange={this.handleChange}>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
 
-          <select name="paid" value={this.state.paid} onChange={this.handleChange}>
-            <option>Yes</option>
-            <option>No</option>
-          </select>
+
+
 
           <br/>
 

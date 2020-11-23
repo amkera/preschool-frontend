@@ -6,11 +6,13 @@ const Students = (props) => {
 
   return (
     <div>
-      {props.students.map(student => (
-        <ul key={student.id}>
-          <Link to={`/students/${student.id}`}>{student.name}</Link>
-        </ul>
-      ))}
+      <h2> All Students </h2>
+        {props.students.map(student => (
+
+          <ul key={student.id}>
+            <Link to={`/students/${student.id}`}>{student.name}</Link>
+          </ul>
+        ))}
     </div>
   )
 

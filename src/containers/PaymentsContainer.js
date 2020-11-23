@@ -11,6 +11,9 @@ class PaymentsContainer extends React.Component {
         <br/>
 
         <PaymentForm student={this.props.student} />
+        <br/>
+        <br/>
+        <br/>
         <Payments payments={this.props.student && this.props.student.payments}/>
       </div>
     )

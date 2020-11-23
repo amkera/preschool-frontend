@@ -13,16 +13,16 @@ const Payments = (props) => {
 
   return (
     <div>
-      <p>All Payments</p>
+      <h2>All Payments</h2>
 
       {props.payments && props.payments.map(payment =>
 
-        <li key={payment.id}>
-          Amount: ${payment.amount} <br/>
-          Date: {payment.date} <br/>
-          Paid: {payment.paid} <br/>
+        <ul key={payment.id}>
+          <p>Amount: ${payment.amount} </p>
+          <p>Date: {payment.date} </p>
+          <p>Paid: {payment.paid} </p>
           <button onClick={() => handleDelete(payment)}>Delete</button>
-        </li>
+        </ul>
       )}
     </div>
   )
