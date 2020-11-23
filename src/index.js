@@ -5,6 +5,7 @@ import thunk from 'redux-thunk'
 import { Provider } from 'react-redux';
 import studentReducer from './reducers/studentReducer'
 import {BrowserRouter as Router} from 'react-router-dom'
+import './preschool.css'
 
 //set up the store => import create store from redux. it comes from redux.
 //import createStore from redux for async requests

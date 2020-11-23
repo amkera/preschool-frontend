@@ -35,8 +35,7 @@ class PaymentForm extends React.Component {
   render() {
     return (
       <div>
-      Add Payment
-        <form onSubmit={this.handleSubmit}>
+        <form class="form" onSubmit={this.handleSubmit}>
           <label>Amount: </label>
             <input type="number" step="0.01" name="amount" value={this.state.amount} onChange={this.handleChange}/>
           <br/>

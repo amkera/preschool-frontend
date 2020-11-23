@@ -32,9 +32,9 @@ class StudentForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>Add Student </label>
+      <div class="form">
+        <form name="student-form" onSubmit={this.handleSubmit}>
+          <label className="student-form"></label>
             <input
               type="text"
               placeholder="Name"
@@ -42,7 +42,8 @@ class StudentForm extends React.Component {
               value={this.state.name}
               onChange={this.handleChange}
             />
-          <label>Student Bio </label>
+
+          <label></label>
             <input
               type="text"
               placeholder="Bio"
@@ -50,7 +51,8 @@ class StudentForm extends React.Component {
               value={this.state.bio}
               onChange={this.handleChange}
             />
-          <label>Any Allergies? </label>
+
+          <label></label>
             <input
               type="text"
               placeholder="Any Allergies?"
@@ -58,6 +60,7 @@ class StudentForm extends React.Component {
               value={this.state.allergies}
               onChange={this.handleChange}
             />
+            <br/>
             <br/>
           <input type="submit" />
         </form>
