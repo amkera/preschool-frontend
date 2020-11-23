@@ -6,10 +6,12 @@ const Payments = (props) => {
 
   const handleDelete = (payment) => {
     // debugger
+    //needs to have account and payment id
     props.deletePayment(payment.id, payment.student_id)
 
   }
-  //needs to have account and payment id
+
+
 
   return (
     <div>
@@ -17,10 +19,13 @@ const Payments = (props) => {
 
       {props.payments && props.payments.map(payment =>
 
+        //let formattedDate =
+
         <h5 key={payment.id}>
           <p>Amount: ${payment.amount} </p>
           <p>Date: {payment.date} </p>
-          <p>Paid: {payment.paid} </p>
+
+          <p>Paid: {payment.paid === true ? "Yes" : "No"} </p>
           <button onClick={() => handleDelete(payment)}>Delete</button>
         </h5>
       )}

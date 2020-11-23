@@ -11,6 +11,7 @@ export const addStudent = (formData) => {
     })
     .then(response => response.json())
     .then(student => dispatch({ type: 'ADD_STUDENT', payload: student }))
+    .then(alert("Student Submitted!"))
   }
 }
 

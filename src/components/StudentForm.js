@@ -32,8 +32,8 @@ class StudentForm extends React.Component {
 
   render() {
     return (
-      <div class="form">
-        <form name="student-form" onSubmit={this.handleSubmit}>
+      <div className="form">
+        <form className="student-form" onSubmit={this.handleSubmit}>
           <label className="student-form"></label>
             <input
               type="text"

@@ -28,6 +28,7 @@ class PaymentForm extends React.Component {
       paid: 'Yes'
     })
 
+
   }
 
 
@@ -36,7 +37,7 @@ class PaymentForm extends React.Component {
     return (
       <div>
       <h3> Add Payment </h3>
-        <form class="form" onSubmit={this.handleSubmit}>
+        <form className="form" onSubmit={this.handleSubmit}>
           <label>Amount: </label>
             <br/>
             <input type="number" step="0.01" name="amount" value={this.state.amount} onChange={this.handleChange}/>
@@ -50,16 +51,12 @@ class PaymentForm extends React.Component {
 
           <label>Payment Received? </label>
 
-          <div class="dropdown">
+          <div className="dropdown">
             <select name="paid" value={this.state.paid} onChange={this.handleChange}>
               <option>Yes</option>
               <option>No</option>
             </select>
           </div>
-
-
-
-
           <br/>
 
           <input type="submit"/>
