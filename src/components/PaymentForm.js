@@ -8,7 +8,7 @@ class PaymentForm extends React.Component {
   state = {
     amount: '0.00',
     date: '',
-    paid: 'Yes'
+    paid: ''
   }
 
   handleChange = (event) => {
@@ -27,8 +27,6 @@ class PaymentForm extends React.Component {
       date: '',
       paid: 'Yes'
     })
-
-
   }
 
 

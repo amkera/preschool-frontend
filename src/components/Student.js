@@ -11,7 +11,6 @@ const Student = (props) => {
 
 
   let student = props.students.filter(student => student.id == props.match.params.id)[0]
-  console.log(student);
 
 
   return (
