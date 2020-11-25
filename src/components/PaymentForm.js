@@ -8,13 +8,21 @@ class PaymentForm extends React.Component {
   state = {
     amount: '0.00',
     date: '',
-    paid: ''
+    paid: false
   }
 
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
     })
+  }
+
+  handlePaymentToggle = (event) => {
+    if (event.target.value === "Yes") {
+      this.setState({paid: true})
+    } else {
+      this.setState({paid: false})
+    }
   }
 
   handleSubmit = (event) => {
@@ -25,11 +33,9 @@ class PaymentForm extends React.Component {
     this.setState({
       amount: '0.00',
       date: '',
-      paid: 'Yes'
+      paid: false
     })
   }
-
-
 
   render() {
     return (
@@ -50,7 +56,7 @@ class PaymentForm extends React.Component {
           <label>Payment Received? </label>
 
           <div className="dropdown">
-            <select name="paid" value={this.state.paid} onChange={this.handleChange}>
+            <select name="paid" value={this.state.paid} onChange={this.handlePaymentToggle}>
               <option>Yes</option>
               <option>No</option>
             </select>

@@ -1,4 +1,5 @@
 export const addPayment = (paymentFormData, studentId) => {
+  //debugger
   return (dispatch) => {
     fetch(`http://localhost:3000/api/v1/students/${studentId}/payments`, {
       method: 'POST',

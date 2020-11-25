@@ -21,6 +21,10 @@ let store = createStore(studentReducer, composeEnhancers(applyMiddleware(thunk))
 //previous state, and they return a new state.
 //anytime something is dispatched, I want that action object sent to the reducer which will update the store.
 
+//createStore gives you access to getState and dispatches. it's what we use to actually generate the redux store
+
+//which is what connect uses to mapStateToProps and mapDispatchToProps
+
 
 ReactDOM.render(
   <Provider store={store}>
@@ -36,3 +40,5 @@ ReactDOM.render(
 
 //provider makes it so the store is global to all components and containers, aka App and all its children.
 //They will have access to the store that I pass into the provider
+
+//connect allows us to call the store and dispatches

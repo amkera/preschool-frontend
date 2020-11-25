@@ -33,6 +33,12 @@ class StudentsContainer extends React.Component {
   }
 
 }
+//routerprops comes from react router, allowing  you access to the history
+
+//only two ways to render a component in switch: component= and render=
+//but render= is the only way to get access to the routerProps
+
+//
 
 //for the dynamic show route, I pass in routerProps as an argument to an anon function
 //then we render the Student Component, pass in routerProps which gives me access to params where I can pull the id, and then pass down all students
