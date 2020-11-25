@@ -6,7 +6,7 @@ import {addPayment} from '../actions/addPayment'
 class PaymentForm extends React.Component {
 
   state = {
-    amount: '0.00',
+    amount: '',
     date: '',
     paid: false
   }
@@ -31,7 +31,7 @@ class PaymentForm extends React.Component {
     //addPayment(this.state, this.props.student.id)
     this.props.addPayment(this.state, this.props.student.id)
     this.setState({
-      amount: '0.00',
+      amount: '',
       date: '',
       paid: false
     })
