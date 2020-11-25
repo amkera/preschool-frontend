@@ -8,7 +8,7 @@ class PaymentForm extends React.Component {
   state = {
     amount: '',
     date: '',
-    paid: false
+    paid: true
   }
 
   handleChange = (event) => {
@@ -33,7 +33,7 @@ class PaymentForm extends React.Component {
     this.setState({
       amount: '',
       date: '',
-      paid: false
+      paid: true
     })
   }
 
@@ -56,7 +56,7 @@ class PaymentForm extends React.Component {
           <label>Payment Received? </label>
 
           <div className="dropdown">
-            <select name="paid" value={this.state.paid} onChange={this.handlePaymentToggle}>
+            <select name="paid" onChange={this.handlePaymentToggle}>
               <option>Yes</option>
               <option>No</option>
             </select>
@@ -80,3 +80,5 @@ export default connect(null, {addPayment})(PaymentForm);
 //need to find the correct student
 //send dispatch an action to the reducer to update the store
 //will need to make a new action
+
+//value of a dropdown can't be a boolean, has to be a string
