@@ -11,6 +11,7 @@ const Students = (props) => {
 
           <h5 key={student.id}>
             <Link to={`/students/${student.id}`}>{student.name}</Link>
+            
           </h5>
         ))}
     </div>

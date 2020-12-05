@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {editStudent} from '../actions/editStudent'
-//controlled form because input is tied to the state
 
 class StudentEdit extends React.Component {
 
@@ -33,14 +32,15 @@ class StudentEdit extends React.Component {
     return (
       <div className="form">
         <form className="student-form" onSubmit={this.handleSubmit}>
-          <label className="student-form"></label>
-            <input
-              type="text"
-              placeholder="Name"
-              name="name"
-              value={this.state.name}
-              onChange={this.handleChange}
-            />
+          <h3> Edit Student Information </h3>
+            <label className="student-form"></label>
+              <input
+                type="text"
+                placeholder="Name"
+                name="name"
+                value={this.state.name}
+                onChange={this.handleChange}
+              />
 
           <label></label>
             <input

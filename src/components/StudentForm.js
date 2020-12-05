@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {addStudent} from '../actions/addStudent'
-//controlled form because input is tied to the state
+
 
 class StudentForm extends React.Component {
 

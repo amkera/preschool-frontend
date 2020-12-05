@@ -24,7 +24,6 @@ export default function studentReducer(state = { students: []}, action) {
           }
         })}
       case 'UPDATE_STUDENT':
-        debugger
         return {...state, students: state.students.map(student => {
           if (student.id === action.payload.id) {
             return action.payload
