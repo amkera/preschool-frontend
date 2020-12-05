@@ -1,7 +1,6 @@
 //takes in state, and an action object as the second argument. Reducer updates the state according to the action.type.
 
 export default function studentReducer(state = { students: []}, action) {
-  //debugger
   switch (action.type) {
     case 'FETCH_STUDENTS':
       return {students: action.payload}
@@ -17,6 +16,15 @@ export default function studentReducer(state = { students: []}, action) {
         }
       })}
       case 'DELETE_PAYMENT':
+        return {...state, students: state.students.map(student => {
+          if (student.id === action.payload.id) {
+            return action.payload
+          } else {
+            return student
+          }
+        })}
+      case 'UPDATE_STUDENT':
+        debugger
         return {...state, students: state.students.map(student => {
           if (student.id === action.payload.id) {
             return action.payload

@@ -7,7 +7,7 @@ import fetchStudents from '../actions/fetchStudents'
 import { connect } from 'react-redux'
 import {Route, Switch} from 'react-router-dom'
 //need to connect to the store since StudentsContainer is the component responsible for rendering data
-
+import Home from '../components/Home'
 
 class StudentsContainer extends React.Component {
 
@@ -22,6 +22,7 @@ class StudentsContainer extends React.Component {
 
       <div>
         <Header/>
+        <Home />
         <Switch>
           <Route path="/students/new" component={StudentForm} />
           <Route path="/students/:id" render={(routerProps) => <Student {...routerProps} students={this.props.students} /> } />
