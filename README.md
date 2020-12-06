@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+This is a React/Redux front end with Ruby on Rails API/backend project for Flatiron School of Engineering.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I fetch data from my Rails API (https://github.com/amkera/preschool-backend). The data saves with Ruby on Rails. The data is sent to the front end once the front end fetches for this data.
 
-## Available Scripts
+##Description:
+Inspired by a preschool owner, this is a content management system for an owner of a school to manage their students, and their respective bios, allergies, and payments. The user of my application can view all students at once, click on a student to find more information, update the student information, and add and delete payments for this student.
 
-In the project directory, you can run:
+##Video: I showed a walkthrough of the application here on YouTube: https://youtu.be/vJSeJUmGuyM
 
-### `yarn start`
+##Usage:
+Navigate to this repository: https://github.com/amkera/preschool-frontend
+Fork and clone this repository to your local machine. This is the front-end repository.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Simultaneously, navigate to this repository: https://github.com/amkera/preschool-backend
+Begin the backend Ruby on Rails API by cd'ing into the top most folder, running `bundle install`, and `rails s`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Now, navigate to the folder in which the front end repository was saved to, and run `npm install; npm start`
+Type `y` when prompted if you'd like to use a different server, since localhost:3000 will be occupied by the backend.
 
-### `yarn test`
+In the backend directory, create and set up the SQLite database. Run:
+ `rails db:create`
+ `rails db:migrate`
+ `rails db:seed`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+to create the database, run the migrations, and finally seed the database.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##License:
+This project is licensed under the MIT License.

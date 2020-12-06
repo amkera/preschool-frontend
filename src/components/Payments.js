@@ -5,10 +5,7 @@ import {deletePayment} from '../actions/deletePayment'
 const Payments = (props) => {
 
   const handleDelete = (payment) => {
-    // debugger
-    //needs to have account and payment id
     props.deletePayment(payment.id, payment.student_id)
-
   }
 
 

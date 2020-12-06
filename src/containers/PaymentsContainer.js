@@ -9,7 +9,6 @@ class PaymentsContainer extends React.Component {
     return (
       <div>
         <br/>
-
         <PaymentForm student={this.props.student} />
         <br/>
         <br/>
