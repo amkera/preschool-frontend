@@ -11,10 +11,10 @@ import Home from '../components/Home'
 
 class StudentsContainer extends React.Component {
 
+
   //we need to actually get the students from backend, so we fetch. and we need to connect fetch to the store
   componentDidMount() {
     this.props.fetchStudents()
-
   }
 
   render() {

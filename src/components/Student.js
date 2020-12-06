@@ -16,18 +16,13 @@ const Student = (props) => {
 
   let student = props.students.filter(student => student.id == props.match.params.id)[0]
 
-
-
   return (
     <ul>
       <p> <strong>Name: </strong> {student ? student.name : null} </p>
       <p> <strong>Bio: </strong> {student ? student.bio : null} </p>
       <p> <strong>Allergies: </strong> {student ? student.allergies : null}</p>
       <br/>
-      <br/>
-
-      <Link to="/student/:id/edit" component={StudentEdit} student={student}/>
-
+      <StudentEdit student={student}/>
       <PaymentsContainer student={student}/>
     </ul>
   )
