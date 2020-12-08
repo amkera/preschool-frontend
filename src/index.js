@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware, compose} from 'redux';
-//createStore is from redux for async requests
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux';
 import studentReducer from './reducers/studentReducer'
