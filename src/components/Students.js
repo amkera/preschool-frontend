@@ -2,25 +2,51 @@ import React from 'react';
 import Student from './Student'
 import {Route, Link} from 'react-router-dom'
 
-const Students = (props) => {
-  // console.log(props)
-  // console.log(props.history)
-  // console.log(props.location)
-  // console.log(props.match)
-  // console.log(props.match.params)
+class Students extends React.Component {
 
-  return (
-    <div>
-      <h2> All Students </h2>
-        {props.students.map(student => (
+  state = {
+    studentName: ''
+  };
 
-          <h5 key={student.id}>
-            <Link to={`/students/${student.id}`}>{student.name}</Link>
 
-          </h5>
-        ))}
-    </div>
-  )
+  handleOnChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+    this.searchByName();
+  }
+
+  searchByName = () => {
+    return this.props.students.filter(student => student.name.toUpperCase().includes(this.state.studentName.toUpperCase()))
+  }
+
+
+  render() {
+    return (
+      <div>
+        <input
+          type="text"
+          name="studentName"
+          placeholder="Search By Name"
+          value={this.state.studentName}
+          onChange={this.handleOnChange}
+        />
+
+        <h2> All Students </h2>
+  
+
+
+          {this.searchByName().map(student => (
+
+            <h5 key={student.id}>
+              <Link to={`/students/${student.id}`}>{student.name}</Link>
+
+            </h5>
+          ))}
+      </div>
+    )
+
+  }
 
 }
 
