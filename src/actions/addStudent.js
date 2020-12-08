@@ -14,9 +14,3 @@ export const addStudent = (formData) => {
     .then(alert("Student Submitted!"))
   }
 }
-
-
-
-//we need to return a function here, that takes the dispatch function as an argument.
-//thunk allows us to dispatch from inside the action creator
-//don't need to export if you wrap {addStudent} in curly braces inside StudentForm which I did.

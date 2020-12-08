@@ -27,8 +27,7 @@ class PaymentForm extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    //actioncreator needed, and correct student to associate account
-    //addPayment(this.state, this.props.student.id)
+
     this.props.addPayment(this.state, this.props.student.id)
     this.setState({
       amount: '',
@@ -72,13 +71,12 @@ class PaymentForm extends React.Component {
 }
 
 export default connect(null, {addPayment})(PaymentForm);
+
+
+
+
+
+
+
 //don't need a mapStateToProps since props are being passed down from Payments Container
 //DOES need a mapDispatchToProps is needed, or an action is needed since we are changing the store
-
-
-//pseudocode: need to connect to the store
-//need to find the correct student
-//send dispatch an action to the reducer to update the store
-//will need to make a new action
-
-//value of a dropdown can't be a boolean, has to be a string

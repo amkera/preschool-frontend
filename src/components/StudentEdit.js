@@ -69,10 +69,3 @@ class StudentEdit extends React.Component {
 }
 
 export default connect(null, {editStudent})(StudentEdit);
-
-//this component calls addStudent function that will dispatch an action to the reducer
-//mapStateToProps gives the component access to what's ALREADY in the redux store. We don't need that here.
-//mapDispatchToProps, or directly putting an action creator like I did, allows component to CHANGE
-//what's in the store
-
-//we can call this.props.addStudent, thanks to connect

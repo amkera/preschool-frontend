@@ -25,7 +25,7 @@ const Payments = (props) => {
     </div>
   )
 
-  //need props.payments &&... because first time we render, props.payments is undefined and
+  //need props.payments &&... because first time we render, props.payments is undefined
 
 }
 

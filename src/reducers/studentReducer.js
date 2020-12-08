@@ -35,6 +35,12 @@ export default function studentReducer(state = { students: []}, action) {
       return state
   }
 }
+
+
+
+
+
+
 //when we are adding a payment:
 //return the state with the students array such that when we map over the array of students
 //if the student.id from the student coming from the backend matches the student id in the payload,
@@ -43,9 +49,3 @@ export default function studentReducer(state = { students: []}, action) {
 //return the student
 
 //^same for delete
-
-
-//action.payload will be the array of students
-
-//on the first time the reducer is used, it's given the default state we pass in when we declare the function.
-//All other times, it takes in the previous state.

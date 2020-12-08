@@ -16,6 +16,7 @@ class StudentForm extends React.Component {
       [event.target.name]: event.target.value
     })
   }
+  //event automatically passed in
 
   handleSubmit = (event) => {
     event.preventDefault()
@@ -26,9 +27,6 @@ class StudentForm extends React.Component {
       allergies: ''
     })
   }
-
-  //this is passed into the action creator, addStudent.js. this.state is the formData.
-  //this.handleChange actually automatically passes event into the function so I don't have to pass it in below
 
   render() {
     return (
@@ -70,10 +68,3 @@ class StudentForm extends React.Component {
 }
 
 export default connect(null, {addStudent})(StudentForm);
-
-//this component calls addStudent function that will dispatch an action to the reducer
-//mapStateToProps gives the component access to what's ALREADY in the redux store. We don't need that here.
-//mapDispatchToProps, or directly putting an action creator like I did, allows component to CHANGE
-//what's in the store
-
-//we can call this.props.addStudent, thanks to connect
