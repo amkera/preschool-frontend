@@ -3,6 +3,11 @@ import Student from './Student'
 import {Route, Link} from 'react-router-dom'
 
 const Students = (props) => {
+  // console.log(props)
+  // console.log(props.history)
+  // console.log(props.location)
+  // console.log(props.match)
+  // console.log(props.match.params)
 
   return (
     <div>
@@ -20,12 +25,3 @@ const Students = (props) => {
 }
 
 export default Students;
-
-//in functions, we have to pass props into the function. you don't use this in functions.
-//it's a keyword for classes
-
-//in classes, we can just say this.props
-
-// //          <h3> Name: {student.name} </h3>
-//           <p> Bio: {student.bio} </p>
-//           <p> Allergies: {student.allergies} </p>

@@ -22,8 +22,9 @@ class StudentsContainer extends React.Component {
 
       <div>
         <Header/>
-        <Home />
+
         <Switch>
+          <Route exact path="/" component={Home}/>
           <Route path="/students/new" component={StudentForm} />
           <Route path="/students/:id" render={(routerProps) => <Student {...routerProps} students={this.props.students} /> } />
           <Route path="/students" render={(routerProps) => <Students {...routerProps} students={this.props.students} /> } />
