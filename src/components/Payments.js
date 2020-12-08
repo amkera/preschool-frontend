@@ -15,8 +15,6 @@ const Payments = (props) => {
 
       {props.payments && props.payments.map(payment =>
 
-        //let formattedDate =
-
         <h5 key={payment.id}>
           <p>Amount: ${payment.amount} </p>
           <p>Date: {payment.date ? payment.date.slice(0,10) : null} </p>
@@ -28,8 +26,6 @@ const Payments = (props) => {
   )
 
   //need props.payments &&... because first time we render, props.payments is undefined and
-  //error: TypeError: Cannot read property 'map' of undefined
-  //therefore need to check that props.payments is not first undefined
 
 }
 

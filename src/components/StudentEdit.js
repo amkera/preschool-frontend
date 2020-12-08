@@ -5,9 +5,9 @@ import {editStudent} from '../actions/editStudent'
 class StudentEdit extends React.Component {
 
   state = {
-    name: this.props.student.name,
-    bio: this.props.student.bio,
-    allergies: this.props.student.allergies
+    name: '',
+    bio: '',
+    allergies: ''
   }
 
   handleChange = (event) => {
