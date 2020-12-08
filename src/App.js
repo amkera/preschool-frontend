@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-//we want App to have access to the store
-//import fetchStudents from './actions/fetchStudents'
+
 import StudentsContainer from './containers/StudentsContainer'
 
 

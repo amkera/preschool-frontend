@@ -43,5 +43,5 @@ export default connect(mapStateToProps, {fetchStudents})(StudentsContainer);
 
 
 //Student is being rendered because of the dynamic student route set up.
-//When clickin a student link, everything that Student gets will come from line 29 and the props we pass in.
+//When clickin a student link, everything that Student gets will come from line 25 and the props we pass in.
 //in order to give students component access to props, need to set up routes here. because this component can send props down.
