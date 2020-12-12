@@ -19,7 +19,7 @@ class StudentForm extends React.Component {
   //event automatically passed in
 
   handleSubmit = (event) => {
-    debugger
+    //debugger
     event.preventDefault()
     console.log('a')
     this.props.addStudent(this.state);

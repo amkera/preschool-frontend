@@ -13,7 +13,7 @@ class Students extends React.Component {
     this.setState({
       [event.target.name]: event.target.value
     })
-    this.searchByName();
+    //this.searchByName();
   }
 
   searchByName = () => {
@@ -33,7 +33,7 @@ class Students extends React.Component {
         />
 
         <h2> All Students </h2>
-  
+
 
 
           {this.searchByName().map(student => (
