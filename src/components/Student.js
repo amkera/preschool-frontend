@@ -10,12 +10,18 @@ const Student = (props) => {
 
   let student = props.students.filter(student => student.id == props.match.params.id)[0]
 
+  const handleDelete = (student) => {
+    console.log('hey')
+  }
+
   return (
     <ul>
       <p> <strong>Name: </strong> {student ? student.name : null} </p>
       <p> <strong>Bio: </strong> {student ? student.bio : null} </p>
       <p> <strong>Allergies: </strong> {student ? student.allergies : null}</p>
       <br/>
+      <button onClick={() => handleDelete(student)}>Delete Student</button>
+
       <StudentEdit student={student}/>
       <PaymentsContainer student={student}/>
     </ul>
