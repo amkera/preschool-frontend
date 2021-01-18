@@ -4,6 +4,7 @@ import {Redirect} from 'react-router-dom'
 import PaymentsContainer from '../containers/PaymentsContainer'
 import StudentEdit from './StudentEdit'
 import {Route, Link} from 'react-router-dom'
+import {deleteStudent} from '../actions/deleteStudent'
 
 
 const Student = (props) => {
@@ -11,12 +12,8 @@ const Student = (props) => {
   let student = props.students.filter(student => student.id == props.match.params.id)[0]
 
   const handleDelete = (student) => {
-    console.log("Here is the student")
-    console.log(student)
-    console.log("Here are the props")
-    console.log(props)
+    props.deleteStudent(student)
     debugger
-    //write an action here 1/18/21
   }
 
   return (
