@@ -11,7 +11,7 @@ const Student = (props) => {
   let student = props.students.filter(student => student.id == props.match.params.id)[0]
 
   const handleDelete = (student) => {
-    console.log('hey')
+    console.log('this is working')
     //write an action here 1/18/21
   }
 
