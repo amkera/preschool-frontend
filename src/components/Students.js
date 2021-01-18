@@ -34,8 +34,6 @@ class Students extends React.Component {
 
         <h2> All Students </h2>
 
-
-
           {this.searchByName().map(student => (
 
             <h5 key={student.id}>

@@ -12,7 +12,7 @@ const Student = (props) => {
 
   const handleDelete = (student) => {
     console.log('hey')
-    //write an action here 
+    //write an action here 1/18/21
   }
 
   return (

@@ -1,5 +1,6 @@
 export const addStudent = (formData) => {
   console.log('b')
+
   return (dispatch) => {
     console.log('c')
     fetch('http://localhost:3000/api/v1/students', {
