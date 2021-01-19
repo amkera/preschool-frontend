@@ -13,7 +13,6 @@ const Student = (props) => {
 
   const handleDelete = (student) => {
     props.deleteStudent(student)
-    debugger
   }
 
   return (
