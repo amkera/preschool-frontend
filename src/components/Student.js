@@ -13,7 +13,7 @@ const Student = (props) => {
   let student = props.students.filter(student => student.id == props.match.params.id)[0]
 
   const handleDelete = (student) => {
-    props.deleteStudent(student)
+    props.deleteStudent(student.id) //34
   }
 
   return (

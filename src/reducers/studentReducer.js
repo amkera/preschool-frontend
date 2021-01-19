@@ -23,6 +23,14 @@ export default function studentReducer(state = { students: []}, action) {
             return student
           }
         })}
+      case 'DELETE_STUDENT':
+        return {...state, students: state.students.map(student => {
+          if (student.id === action.payload.id) {
+            return action.payload
+          } else {
+            return student
+          }
+        })}
       case 'UPDATE_STUDENT':
         return {...state, students: state.students.map(student => {
           if (student.id === action.payload.id) {
