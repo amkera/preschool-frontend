@@ -5,6 +5,7 @@ import PaymentsContainer from '../containers/PaymentsContainer'
 import StudentEdit from './StudentEdit'
 import {Route, Link} from 'react-router-dom'
 import {deleteStudent} from '../actions/deleteStudent'
+import {connect} from 'react-redux';
 
 
 const Student = (props) => {
@@ -30,4 +31,4 @@ const Student = (props) => {
 
 }
 
-export default Student;
+export default connect(null, {deleteStudent})(Student)
