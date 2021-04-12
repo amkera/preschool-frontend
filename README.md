@@ -3,7 +3,7 @@ This is a React/Redux front end with Ruby on Rails API/backend project for Flati
 I fetch data from my Rails API (https://github.com/amkera/preschool-backend). The data saves with Ruby on Rails. The data is sent to the front end once the front end fetches for this data.
 
 ##Description:
-Inspired by a preschool owner, this is a content management system for an owner of a school to manage their students, and their respective bios, allergies, and payments. The user of my application can view all students at once, click on a student to find more information, update the student information, and add and delete payments for this student.
+Inspired by a preschool owner, this is a system for an owner of a school to manage their students, and their respective bios, allergies, and payments. The user of my application can view all students at once, click on a student to find more information, update the student information, and add and delete payments for this student.
 
 ##Video: I showed a walkthrough of the application here on YouTube: https://youtu.be/vJSeJUmGuyM
 
